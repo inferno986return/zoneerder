@@ -323,7 +323,7 @@ define([
       }
 
       if (this.config.sidebar.extraWidgets) {
-        array.forEach(this.config.sidebar.extraWidget, lang.hitch(this, function (widget) {
+        array.forEach(this.config.sidebar.extraWidgets, lang.hitch(this, function (widget) {
           var extraDialogDiv = domConstruct.create('div');
           var dialog = new widget({}, extraDialogDiv);
           var extraDialogTab = sidebar.createTab(dialog.label, dialog.styleIcon, dialog.description);
