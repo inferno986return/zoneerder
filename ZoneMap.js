@@ -322,6 +322,16 @@ define([
         sidebar.createTab('Help', 'fa-question-circle', 'I need somebody');
       }
 
+      if (this.config.sidebar.extraWidgets) {
+        array.forEach(this.config.sidebar.extraWidget, lang.hitch(this, function (widget) {
+          var extraDialogDiv = domConstruct.create('div');
+          var dialog = new widget({}, extraDialogDiv);
+          var extraDialogTab = sidebar.createTab(dialog.label, dialog.styleIcon, dialog.description);
+          extraDialogTab.addContent(extraDialogDiv);
+          extraDialogTab.registerWidget(dialog);
+        }));
+      }
+
       return sidebar;
     }
 
