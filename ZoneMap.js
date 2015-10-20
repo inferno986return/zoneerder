@@ -323,12 +323,12 @@ define([
       }
 
       if (this.config.sidebar.extraWidgets) {
-        array.forEach(this.config.sidebar.extraWidgets, lang.hitch(this, function (widget) {
+        array.forEach(this.config.sidebar.extraWidgets, lang.hitch(this, function (Widget) {
+          var extraDialogTab = sidebar.createTab('', 'fa-list', '');
           var extraDialogDiv = domConstruct.create('div');
-          var dialog = new widget({}, extraDialogDiv);
-          var extraDialogTab = sidebar.createTab(dialog.label, dialog.styleIcon, dialog.description);
           extraDialogTab.addContent(extraDialogDiv);
-          extraDialogTab.registerWidget(dialog);
+          var widget = new Widget({}, extraDialogDiv);
+          extraDialogTab.registerWidget(widget);
         }));
       }
 
