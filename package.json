@@ -18,6 +18,7 @@
     "lib": "."
   },
   "devDependencies": {
+    "grunt": "^1.0.1",
     "intern": "^3.4.1"
   }
 }

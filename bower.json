@@ -5,10 +5,11 @@
   "main": "ZoneMap.js",
   "ignore": [
     "doc",
-    "test",
+    "node_modules",
     "tests",
     ".bowerrc",
     ".gitignore",
+    "Gruntfile.js",
     "README.md"
   ],
   "dependencies": {

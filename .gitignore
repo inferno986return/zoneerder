@@ -1,6 +1,9 @@
 # IDE stuff:
 .idea
 
+# node modules
+node_modules/
+
 # javascript libraries
 crabpy_dojo
 dojo
