@@ -2,26 +2,31 @@
 module.exports = function (grunt) {
 	var path = require('path');
 
-  // Load the Intern task
+  // Load all the tasks
   grunt.loadNpmTasks('intern');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 
   // Configure tasks
   grunt.initConfig({
     intern: {
-      dist: {
+      dev: {
         options: {
           runType: 'client',
           config: 'tests/intern',
           reporters: [ 'Console' ]
         }
       }
+    },
+    jshint: {
+      all: ['Gruntfile.js', './*.js', 'widgets/**/*.js'],
+      options: {
+        jshintrc: './.jshintrc'
+      }
     }
   });
 
 
-  // Register a test task that uses Intern
-  grunt.registerTask('test', [ 'intern' ]);
-
-  // By default we just test
+  // Register tasks
+  grunt.registerTask('test', [ 'jshint', 'intern' ]);
   grunt.registerTask('default', [ 'test' ]);
 };
