@@ -1,15 +1,27 @@
 {
   "name": "zoneerder",
   "description": "A configurable openlayers 3 map wrapped in a dojo widget",
-  "version": "0.4.5",
+  "keywords": [
+    "dojo",
+    "widget",
+    "openlayers"
+  ],
+  "authors": [
+    "Flanders Heritage Agency <ict@onroerenderfgoed.be>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OnroerendErfgoed/zoneerder"
+  },
   "main": "ZoneMap.js",
+  "license": "MIT",
+  "moduleType": [ "amd" ],
+  "private": "true",
   "ignore": [
-    "doc",
-    "test",
+    ".*",
+    "node_modules",
     "tests",
-    ".bowerrc",
-    ".gitignore",
-    "README.md"
+    "Gruntfile.js"
   ],
   "dependencies": {
     "dojo": "~1.11.2",
