@@ -42,3 +42,8 @@ Voorbeeld config:
         ogcproxyUrl: 'https://dev-geo.onroerenderfgoed.be/ogcproxy?url='
     };
 ```
+
+Testen
+run 'npm start'
+ga naar
+http://localhost:8000/node_modules/intern/client.html?config=tests/intern

@@ -1,7 +1,7 @@
 define(function (require) {
   var registerSuite = require('intern!object');
   var assert = require('intern/chai!assert');
-  var dummy = require('widgets/dummy/dummy');
+  var dummy = require('zoneerder/widgets/dummy/dummy');
 
   registerSuite({
     name: 'hello',
