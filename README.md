@@ -46,4 +46,6 @@ Voorbeeld config:
 Testen
 run 'npm start'
 ga naar
+http://localhost:8000/tests/runTests.html
+of
 http://localhost:8000/node_modules/intern/client.html?config=tests/intern
